@@ -9,14 +9,8 @@ public partial class Example : ComponentBase, IAsyncDisposable
     [Inject]
     private IJSRuntime JSRuntime { get; set; } = null!;
 
-    private string _message = "Hello World!";
     private Lazy<IJSObjectReference> ExampleModule = new();
     private static readonly string[] args = new [] { "./Components/Example.razor.js"};
-
-    private void UpdateMessage()
-    {
-        _message = "Hello Blazor!";
-    }
 
     protected override async Task OnInitializedAsync()
     {
