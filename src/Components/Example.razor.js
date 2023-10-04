@@ -33,6 +33,7 @@ class Example extends Phaser.Scene
         type: Phaser.AUTO,
         width: 800,
         height: 600,
+        parent: 'phaser-game',
         scene: Example,
         physics: {
             default: 'arcade',
